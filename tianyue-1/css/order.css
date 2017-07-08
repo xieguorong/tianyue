@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+/*我的订单*/
+
+.wrap {
+	width: 80%;
+	margin: 0 auto;
+}
+.wrap td {
+	vertical-align: middle!important;
+}
+#time {
+	margin: 10px 0;
+	padding: 10px 0 ;
+	font-size: 18px;
+	color: #fff;
+	width: 200px;
+	background: #ccc;
+	text-align: center;
+	font-weight: bold;
+	border-radius: 5px;
+}

@@ -1,0 +1,36 @@
+.box {
+    background-color: #ffffff;
+    height: 100px;
+}
+.hide {
+    display: inline-block !important;
+}
+h1 {
+    font-size: 27px;
+    line-height: 50px;
+    margin-top: 20px;
+}
+th {
+    text-align: center;
+    padding: 10px 50px;
+    background-color:#61d2eb;
+}
+td, th {
+    text-align: center;
+}
+.number{
+    width: 30px!important;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px;
+}
+.pic{
+    width: 967px !important;
+}
+h4 {
+    font-size: 24px;
+    line-height: 26px;
+    float: right;
+}

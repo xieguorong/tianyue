@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>添跃防水</title>
+
+    <!-- Bootstrap -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!--Start获取时间-->
+    <style type="text/css">
+    	.wrap {
+	width: 80%;
+	margin: 0 auto;
+}
+.wrap td {
+	vertical-align: middle!important;
+}
+#time {
+	margin: 10px 0;
+	padding: 10px 0 ;
+	font-size: 18px;
+	color: #fff;
+	width: 200px;
+	background: #ccc;
+	text-align: center;
+	font-weight: bold;
+	border-radius: 5px;
+}
+    </style>
+		<script type="text/javascript">  
+    //获取系统时间，将时间以指定格式显示到页面。 
+      function systemTime()  
+      {  
+        //获取系统时间。  
+        var dateTime=new Date();
+		    var yy =dateTime.getFullYear();
+		    var mou=dateTime.getMonth()+1;
+		
+		    var day=dateTime.getDate();
+        var hh=dateTime.getHours();  
+        var mm=dateTime.getMinutes();  
+        var ss=dateTime.getSeconds();  
+          
+        //分秒时间是一位数字，在数字前补0。  
+        mm = extra(mm);  
+        ss = extra(ss);  
+          
+        //将时间显示到ID为time的位置，时间格式形如：19:18:02  
+        document.getElementById("time").innerHTML= yy + "."+mou +"."+ day + "   "+hh+":"+mm+"'";  
+          
+        //每隔1000ms执行方法systemTime()。  
+        setTimeout("systemTime()",1000);  
+      }  
+      
+      //补位函数。  
+      function extra(x)  
+      {  
+        //如果传入数字小于10，数字前补一位0。  
+        if(x < 10)  
+        {  
+            return "0" + x;  
+        }  
+        else  
+        {  
+            return x;  
+        }  
+      }  
+      </script>  
+		<!--End 获取时间-->
+    
+  </head>
+  <body onload="systemTime()">
+  	<div class="wrap">
+  		<h2>我的订单</h2>
+      <hr />
+      <div id="time"></div>
+      <table class="table table-responsive table-bordered table-hover text-center" border="" cellspacing="" cellpadding="">
+      	<tr>
+      		<th class="text-center">序号</th>
+      		<th class="text-center">产品图片</th>
+      		<th class="text-center">产品名称</th>
+      		<th class="text-center">单价/数量</th>
+      	</tr>
+      	<tr>
+      		<td>1</td>
+      		<td ><img class="img-responsive" src="./img/try-1.png"/></td>
+      		<td>灯泡</td>
+      		<td>￥100*1</td>
+      	</tr>
+      	<tr>
+      		<td>2</td>
+      		<td ><img class="img-responsive" src="./img/try-1.png"/></td>
+      		<td>灯泡</td>
+      		<td>￥100*1</td>
+      	</tr>
+      	
+      </table>
+      <button class="btn btn-info">去支付</button>
+  	</div>
+    
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="./js/vendor/jquery-1.12.4.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./js/bootstrap.min.js"></script>
+  </body>
+</html>
